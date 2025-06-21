@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>Stopwatch Web Application</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+  <div class="container">
+<h1 class="title">Stopwatch</h1>
+  <select id="themeSelector" onchange="changeTheme(this.value)">
+  <option value="dark">Dark (Default)</option>
+  <option value="neon">Neon Blue</option>
+  <option value="sunset">Sunset Glow</option>
+  <option value="forest">Forest Green</option>
+</select>
+    <div class="stopwatch">
+      <div class="needle" id="needle"></div>
+      <div class="center-dot"></div>
+      <div class="digital" id="display">00:00.00</div>
+    </div>
+    <div class="controls">
+      <button onclick="startStopwatch()">Start</button>
+      <button onclick="pauseStopwatch()">Pause</button>
+      <button onclick="resetStopwatch()">Reset</button>
+      <button onclick="lapTime()">Lap</button>
+    </div>
+    <ul id="laps" class="laps"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
